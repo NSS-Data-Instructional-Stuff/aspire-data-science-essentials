@@ -8,6 +8,12 @@ Building a Classifier
 
 Coding tasks:
  - What does the exploratory data analysis suggest about our question?
+ - Make a copy of your notebook and then remove the `TENNESSEE` filters for the cancer, heart attack, and income data. Be sure to use state and county for any aggregations. You will also need to use the `state_abbrev.csv` file, which lists state names and their 2-character abbreviations, to map the state names in the cancer and heart attack data to their abbreviations **prior** to merging with the income data. The code for mapping will look something like this:
+      ```
+   state_abbrev=pd.read_csv('../data/state_abbrev.csv')
+   ha_costs['state']=ha_costs.state.map(state_abbrev.set_index('name')['abbrev'].to_dict())
+   ```
+
  - Using existing features in the provided datasets or engineering new features from the existing ones, build a `RandomForestClassifier`
     - Use `pd.get_dummies()` with your explanatory variables to encode any categorical values. Features for your model must be numeric.
      - Split the data into train and test sets.
