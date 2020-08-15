@@ -1,6 +1,7 @@
 ## Week 2:
  
 How do we typically clean data?
+
  - Common data wrangling issues 
  - Resources for help with coding 
  - Commonly used pandas methods 
