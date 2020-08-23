@@ -1,15 +1,14 @@
-##### Week 3:
+## Week 3:
 
-Creating new columns from existing columns
- - For loops and list comprehensions
- - Using the df.iterrows() method to iterate through a DataFrame
+New Topics:
+
+ * Creating calculated columns
+ * Visual EDA: bar plots, histograms, box plots, swarm plots, scatterplots
   
 
 Coding Task:
-1. Write a for-loop to iterate through the `income_county_agg` DataFrame and create a list of average incomes for each county. Assign this list to a new column in `income_county_agg` called `avg_income`. 
-    - First create an empty list called `avg_inc_list` 
-    - Begin the for-loop to iterate through `income_county_agg` 
-    - Store the row's total income in a variable called `income`. Remember to multiply total income by 1000 before storing it in order to get the actual amount.
-    - Store each row's `return_count` in a variable called `count`.
-    - divide `income` by `count`, round it to the nearest whole number, and `append` it to `avg_inc_list`.
-    - Assign `avg_income_list` to a new column in `income_county_agg` called `avg_income`.
+
+1. Using the `tn_income` DataFrame, create a bar plot showing the total number of returns per income bucket for the state of Tennessee. You can get the total numbers for the state by filtering to rows where the `county` variable is "Tennessee".
+2. Create a calculated column in the `income_county_agg` DataFrame which gives the approximate average household income for each county. Calculate this as 1000*`total_inc_amt` / `return_count`.
+3. Create a histogram showing the distribution of average incomes across all counties in Tennessee. Be sure to remove the Tennessee row prior to creating this histogram.
+4. For both `tn_cancer_costs` and `tn_ha_costs`, create boxplots and swarmplots comparing the distribution of analysis_value for urban counties vs. rural counties. What do you notice?

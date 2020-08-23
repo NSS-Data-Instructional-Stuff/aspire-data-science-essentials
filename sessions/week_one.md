@@ -15,12 +15,9 @@ Coding tasks:
     * `import pandas as pd`  
     *  Create a DataFrame, `ha_costs_df`, from the `mmd_heart_attack_data.csv` file.   
         - Examine the first 5 rows and the last five rows of the TN heart attack  data.  
-        - Check the data types of each column by using `.info`.  
+        - Check the data types of each column by using the `.info()` method.  
         - Keep only the rows where facilities are in TN.    
         - Print the dimensions of the data. How many TN counties are represented in the heart attack costs data?
-        - How many counties are classified as Urban? How many as Rural?
-        - Examine the distribution of costs (contained in the `analysis_value` column).
-        - Does there appear to be a difference in costs between Urban counties and Rural counties?
     * Create a DataFrame, `cancer_costs_df`, from the `mmd_cancer_data.csv` file.  
         - Look at the head and tail of the DataFrame.  
         - Print the shape of the `cancer_costs_df`.  
