@@ -13,7 +13,7 @@ New Topics:
 
   2. In the `tn_ha_costs` DataFrame, rename the `analysis_value` column to `ha_avg_cost`. Similarly, in the `tn_cancer_costs` DataFrame, rename the `analysis_value` column to `cancer_avg_cost`.
   
-  3. Create a new dataframe, `tn_df` by merging the `county`, `urban`, and `cancer_avg_cost` columns from `tn_cancer_costs` with the `county` and `ha_avg_cost` column from `tn_ha_costs`. Make sure that the resulting DataFrame contains _all_ counties.
+  3. Create a new dataframe, `tn_df` by merging the `county`, `urban`, and `cancer_avg_cost` columns from `tn_cancer_costs` with the `county` and `ha_avg_cost` column from `tn_ha_costs`. Make sure that the resulting DataFrame contains just the counties that are in both `tn_cancer_costs` and `tn_ha_costs`.
   
   4. Create a scatterplot comparing the average cost of a heart attack to the average cost for cancer for each county. What do you notice?
   
