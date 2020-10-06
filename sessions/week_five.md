@@ -7,7 +7,7 @@ Building a Classifier
 
 Coding tasks:
  - What does the exploratory data analysis suggest about our question?
- - Build a model that will predict whether the average cost for cancer care is above the average cost or equal to or below the average cost.
+ - Build a model that will predict whether the average cost to income ratio for cancer care is above the average ratio or equal to or below the average ratio.
  - To train a model, we will want to get more that just the Tennessee data. Make a copy of your notebook and then remove the `TENNESSEE` filters for the cancer, heart attack, and income data. **Be sure to use state and county for any aggregations.** 
    - You can remove the cells for creating visualizations from this new notebook
    - You will need to use the `state_abbrev.csv` file, which lists state names and their 2-character abbreviations, to map the state names in the cancer and heart attack data to their abbreviations **prior** to merging with the income data. The code for mapping will look something like this:
@@ -16,8 +16,8 @@ Coding tasks:
    
    ha_costs['state']=ha_costs.state.map(state_abbrev.set_index('name')['abbrev'].to_dict())
    ```
-- Create your target variable (whether cancer cost is above or below the mean)
-- What are your preictors?
+- Create your target variable (whether cancer cost ratio is above or below the mean)
+- What are your predictors?
     - Use `pd.get_dummies()` with your explanatory variables to encode any categorical values. Features for your model must be numeric.
      - Split the data into train and test sets.
     - Build and evaluate a logistic regression model.
