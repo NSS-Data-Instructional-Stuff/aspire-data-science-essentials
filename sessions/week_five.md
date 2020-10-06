@@ -17,7 +17,7 @@ Coding tasks:
    ha_costs['state']=ha_costs.state.map(state_abbrev.set_index('name')['abbrev'].to_dict())
    ```
 - Create your target variable (whether cancer cost ratio is above or below the mean)
-- What are your preictors?
+- What are your predictors?
     - Use `pd.get_dummies()` with your explanatory variables to encode any categorical values. Features for your model must be numeric.
      - Split the data into train and test sets.
     - Build and evaluate a logistic regression model.
