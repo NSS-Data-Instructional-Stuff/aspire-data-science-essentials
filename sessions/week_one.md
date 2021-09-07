@@ -5,59 +5,15 @@ What is Data Science?
  - The Data Science Process
  - Examples of Data Science in the world
 
-<<<<<<< HEAD
-Understanding the Question + Getting Data
+**Coding tasks:** Create a new Jupyer Notebook to complete the following tasks.
 
-- Critical thinking and active questioning
-- Acquiring domain expertise
-- Articulating the question
-- Review of code for today (pandas API)
+A dataset containing information on US hospitals is contained in the data folder in the file `Hospitals.csv`. This datset was downloaded from [the Homeland Infrastructure Foundation-Level Data (HIFLD) database](https://hifld-geoplatform.opendata.arcgis.com/datasets/hospitals/explore).
 
-**Coding tasks:** Get and begin cleaning data.  
-
- 1.  Create a DataFrame, `ha_costs_df`, from the `mmd_heart_attack_data.csv` file.
- 
-		- Examine the first 5 rows and the last five rows of the TN heart attack data.
-		- Check the data types of each column by using `.info`.
-		- Keep only the rows where facilities are in TN.
-		- Print the dimensions of the resulting dataframe.
-		- How many TN counties are represented in the heart attack costs data?
-		- How many counties are classified as urban? How many as rural?
-		
- 2.  Create a DataFrame, `cancer_costs_df`, from the `mmd_cancer_data.csv` file.
- 
-		- Look at the head and tail of the DataFrame.
-		- Keep only the rows where facilities are in TN.
-		- Print the dimensions of the data. How many TN counties are represented in the cancer costs data?
-		- You should have found that the datasets have a different number of counties. Bonus: Can you figure out which counties are missing from one of the datasets?
-
- 2.  Create a DataFrame, `income_df`, from the `irs_county_2016.csv` file.
- 
-        - Keep only the data that pertains to Tennessee.
-        - Look at the head and the tail.
-        - Print the shape.
-        - Keep only the following columns:  `['STATE', 'COUNTYNAME', 'agi_stub', 'N1', 'mars1', 'MARS2', 'MARS4', 'N2', 'NUMDEP', 'ELDERLY', 'A00100', 'N02650', 'A02650', 'N02300', 'A02300']`
-        - rename those columns: `['state', 'county', 'income_bucket', 'return_count', 'single_returns', 'joint_returns', 'head_of_house_returns', 'exemptions', 'dependents', 'elderly', 'agi', 'returns_with_total_inc','total_inc_amt', 'returns_with_unemployment', 'unemployment_comp']`
-=======
-Coding tasks:  
-1. get and begin cleaning data  
-    * `import pandas as pd`  
-    *  Create a DataFrame, `ha_costs_df`, from the `mmd_heart_attack_data.csv` file.   
-        - Examine the first 5 rows and the last five rows of the TN heart attack  data.  
-        - Check the data types of each column by using the `.info()` method.  
-        - Keep only the rows where facilities are in TN.    
-        - Print the dimensions of the data. How many TN counties are represented in the heart attack costs data?
-    * Create a DataFrame, `cancer_costs_df`, from the `mmd_cancer_data.csv` file.  
-        - Look at the head and tail of the DataFrame.  
-        - Print the shape of the `cancer_costs_df`.  
-        - Keep only the rows where facilities are in TN.  
-        - Print the dimensions of the data. How many TN counties are represented in the cancer costs data?
-        - You should have found that the datasets have a different number of counties. Which counties are missing from one of the datasets?
-        - Examine the distribution of costs.
-    * Create a DataFrame, `income_df`, from the IRS CSV file.
-        - Keep only the data that pertains to Tennessee.  
-        - Look at the head and the tail  
-        - Print the shape  
-        - Keep only the following columns:  `['STATE', 'COUNTYNAME', 'agi_stub', 'N1', 'mars1', 'MARS2', 'MARS4', 'N2', 'NUMDEP', 'ELDERLY', 'A00100', 'N02650', 'A02650', 'N02300', 'A02300']`  
-        - rename those columns: `['state', 'county', 'income_bucket', 'return_count', 'single_returns', 'joint_returns', 'head_of_house_returns', 'exemptions', 'dependents', 'elderly', 'agi', 'returns_with_total_inc','total_inc_amt', 'returns_with_unemployment', 'unemployment_comp']`  
->>>>>>> updates_2020
+1. Read this dataset into a DataFrame named `hospitals`.
+2. Look at the first few rows and then look at the last few. What do you notice?
+3. How many rows and columns does this DataFrame have?
+4. We don't need all of the columns. Slice the dataframe down so that it only contains the following columns: 'NAME', 'ADDRESS', 'CITY', 'STATE', 'TYPE',  'POPULATION', 'COUNTY', 'COUNTYFIPS', 'NAICS_DESC', 'BEDS'
+5. What are the different hospital types (contained in the `TYPE` column)? Which is the most common?
+6. Find all hospitals in Nashville, Tennessee. Take a look at the BEDS column. What do you notice? Why do you think this is?
+7. Which county in Tennessee has the most hospitals?
+8. There are 95 counties in Tennessee. How many of them have no hospitals at all?
