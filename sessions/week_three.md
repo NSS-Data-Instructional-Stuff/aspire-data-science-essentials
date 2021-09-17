@@ -2,13 +2,20 @@
 
 New Topics:
 
- * Creating calculated columns
- * Visual EDA: bar plots, histograms, box plots, swarm plots, scatterplots
+ * Exploratory Data Analysis
   
 
 Coding Task:
 
-1. Using the `tn_income` DataFrame, create a bar plot showing the total number of returns per income bucket for the state of Tennessee. You can get the total numbers for the state by filtering to rows where the `county` variable is "Tennessee".
-2. Create a calculated column in the `income_county_agg` DataFrame which gives the approximate average household income for each county. Calculate this as 1000*`total_inc_amt` / `return_count`.
-3. Create a histogram showing the distribution of average incomes across all counties in Tennessee. Be sure to remove the Tennessee row prior to creating this histogram.
-4. For both `tn_cancer_costs` and `tn_ha_costs`, create boxplots and swarmplots comparing the distribution of analysis_value for urban counties vs. rural counties. What do you notice?
+This week, you will build off of your work from last week.
+1. First, (if you haven't done so already), create a new column indicating the SHADAC classification for each Tennessee county. You can use the following code to accomplish this:
+```
+physicians.loc[physicians['residents_per_pcp'] < 1500, 'shadac_category'] = 'adequate'
+physicians.loc[(physicians['residents_per_pcp'] >= 1500) & 
+          (physicians['residents_per_pcp'] < 3500), 'shadac_category'] = 'moderately inadequate'
+physicians.loc[(physicians['residents_per_pcp'] >= 3500), 'shadac_category'] = 'low inadequate'
+```
+2. Use this new column to investigate if there is any relationship between a county's status as urban or rural and its SHADAC classification. Create a plot showing what you find.
+3. Merge the unemployment data (contained in tn_unemployment.csv) into the physicians DataFrame.
+4. How do unemployment rates compare for urban counties versus rural counties?
+5. Create a new column, `pcp_per_100k` which contains the number of primary care physicians per 100,000 residents. Investigate the relationship between this new measure and the unemployment rate per county. What do you find?
