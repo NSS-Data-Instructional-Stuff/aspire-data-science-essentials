@@ -12,6 +12,6 @@ A detailed Codebook can be found [here](https://www.cdc.gov/brfss/annual_data/20
 
 Our target variable is the CHECKUP1 column, which contains the responses to the question "About how long has it been since you last visited a doctor for a routine checkup?   [A routine checkup is a general physical exam, not an exam for a specific injury, illness, or condition.]" Specifically, we want to try and predict if someone gives an answer besides "Within past year (anytime less than 12 months ago)".
 
-First, create a new coumn, "target" by converting this to a binary outcome. After you do this, drop teh CHECKUP1 column from your dataframe so that you don't accidentally make predictions based off of it.
+First, create a new coumn, "target" by converting this to a binary outcome. After you do this, drop the CHECKUP1 column from your dataframe so that you don't accidentally make predictions based off of it.
 
 Then, experiment with making a logistic regression model to predict the target variable using one or more of the other columns. Note that you will need to convert the precictor columns into dummy variable prior to fitting a model. What do you find?
