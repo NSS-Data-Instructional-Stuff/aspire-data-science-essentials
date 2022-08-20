@@ -8,8 +8,6 @@ First, TN Med Helper is concerned about communities either lacking access to hea
 
 Second, TN Med Helper is interested in reducing the number of potentially preventable hospitalizations. Do areas that lack access to healthcare tend to have higher rates of emergency department visits or hospitalizations? Is there an association between the percentage of beneficiaries who had an annual wellness visit and rate of hospitalizations or emergency department visits?
 
-Finally, TN Med Helper expects that expanding telehealth to the areas you identify will increase the proportion of people receiving annual wellness checks. What other effects could be expected as a result of this?
+Finally, TN Med Helper is trying to identify specific subpopulations to focus more attention on. Using data from [the Behavioral Risk Factor Surveillance System](https://www.cdc.gov/brfss/index.html), build a model to predict whether an individual has not had a checkup in the last year. What features does your model rely on to make predictions? 
 
-At the end of the project, teams will present their findings to **TN Med Helper**.
-
-Each week's planned session is outlined in the markdown files in the sessions folder.
+Over the course of this class, you will build up your data analysis skills and work towards answering these questions. At the end of the project, teams will present their findings to **TN Med Helper**.
