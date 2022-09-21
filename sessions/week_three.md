@@ -19,3 +19,6 @@ physicians.loc[(physicians['residents_per_pcp'] >= 3500), 'shadac_category'] = '
 3. Merge the unemployment data (contained in tn_unemployment.csv) into the physicians DataFrame.
 4. How do unemployment rates compare for urban counties versus rural counties?
 5. Create a new column, `pcp_per_100k` which contains the number of primary care physicians per 100,000 residents. Investigate the relationship between this new measure and the unemployment rate per county. What do you find?
+
+Additional Task:
+Attempt to install the conda environment, following the directions in conda_environment_installation.pdf.
